@@ -7,6 +7,7 @@ def palindrome(word: str) -> bool:
     for character in range(len(word) - 1, -1, -1):
         # concatenate each character together
         reverse_word += word[character]
+    print(reverse_word)
     # now we check if the 'reversed' word is equal to the argument, 'word'     
     if reverse_word == word:
         # if so return True
