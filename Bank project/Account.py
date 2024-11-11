@@ -15,13 +15,14 @@ class BankAccount:
         
     
     def get_balance(self):
-        return self.balance
+        print(f"{self.balance}")
 
     
     def transfer(self, amount: float, other_account : "BankAccount"):
         if self.balance >= amount: 
             self.withdraw(amount)
             other_account.deposit(amount)
-        print(f"{self.balance} is insufficient to transfer.")
+        else:
+            print(f"{self.balance} is insufficient to transfer.\n")
         
     
