@@ -9,6 +9,8 @@ class BankAccount:
         
     
     def withdraw(self, amount: float):
+        if self.balance < amount:
+            print("There is an insufficient balance.")
         self.balance -= amount
         
     
@@ -18,4 +20,8 @@ class BankAccount:
     
     def transfer(self, amount: float, other_account : "BankAccount"):
         if self.balance >= amount: 
-            
+            self.withdraw(amount)
+            other_account.deposit(amount)
+        print(f"{self.balance} is insufficient to transfer.")
+        
+    
