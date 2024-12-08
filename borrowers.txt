@@ -1,0 +1,3 @@
+alice,The Great Gatsby,2024-12-01,None
+bob,1984,2024-11-28,2024-12-03
+alice,To Kill a Mockingbird,2024-11-20,2024-11-30
