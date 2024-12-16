@@ -19,8 +19,8 @@ def main():
             words = line.split()
             list_of_words.extend(words)
     
-    print(word_counter(list_of_words, word_to_find))
-            
+    with open("counted.txt", "w") as f:
+        f.write(word_to_find + " occurred " + str(word_counter(list_of_words, word_to_find)) + " times!")
     
 if __name__ == "__main__":
     main()
